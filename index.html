@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <!-- meta tags to get a wellcrafted page -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Omar Lopez | Diseñador Gráfico Profesional</title>
+  <meta name="description" content="Soy Omar López, diseñador gráfico especializado en branding y desarrollo web. Creo identidades visuales y experiencias digitales para impulsar tu marca."/>
+  <meta name="author" content="Omar David López Estrada">
+  <meta name="robots" content="index, follow"/><!-- Allow search engines to index the page and follow links -->
+  <link rel="canonical" href="https://omardgraf05.github.io/"/>
+
+  <!-- SEO Meta Tags -->
+  <meta property="og:locale" content="es_CO" /><!-- Open Graph locale for Colombia -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ODGRAF" />
+  <meta property="og:title" content="Omar López - Diseñador Gráfico Profesional"/>
+  <meta property="og:description" content="Soy Omar López, diseñador gráfico especializado en branding y desarrollo web. Creo identidades visuales y experiencias digitales para impulsar tu marca."/>
+  <meta property="og:url" content="https://omardgraf05.github.io/"/>
+  <!-- Open Graph image for social media sharing -->
+  <meta property="og:image" content="./img/img_cards/Opengraph_cover_home_sp.png"/>
+  
+  <!--Main stylesheet-->
+  <link rel="stylesheet" href="./css/main.css"/>
+
+  <!--Fonts from GoogleFonts: UNBOUNDED family and ROBOTO Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png"/>
+
+  <!--Script-->
+  <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="o-container header__container">
+
+      <a class="header__logo--link" href="index.html">
+        <img class="header__logo" src="./img/Logo-ODGRAF.svg" alt="Logo de la marca ODGRAF">
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="portfolio.html" class="btn btn--mode-light btn--tertiary btn--size-m">Portafolio</a></li>
+          <li><button class="btn btn--mode-light btn--tertiary btn--size-m" type="button" data-contact-open aria-controls="contact-modal">Contactar</button></li>
+        </ul>
+      </nav>
+  
+      <button class="header__menu-toggle btn btn--mode-light btn--tertiary btn--size-m" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <img src="./img/menu-icon.svg" alt="">
+      </button>
+    </div>
+  </header>
+  
+  <!-- Area for mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú principal móvil">
+
+    <div class="mobile-menu-container-a">
+
+      <div class="mobile-menu__top">
+        <a class="mobile-menu__logo" href="/" aria-label="Inicio">
+          <img src="./img/Logo-ODGRAF.svg" alt="Logo de la marca ODGRAF">
+        </a>
+
+        <button class="mobile-menu__close btn btn--mode-light btn--tertiary btn--size-m" type="button" aria-label="Cerrar menú">
+          <img class="mobile-menu__close-icon" aria-hiden="true" src="./img/x-icon.svg" alt="Boton para cerrar el menú">
+        </button>
+      </div>
+
+      <ul class="mobile-menu__list">
+        <li><a class="btn btn--mode-light btn--secondary btn--size-l" href="./portfolio.html">Portafolio</a></li>
+        <li><button class="btn btn--mode-light btn--secondary btn--size-l mobile-menu__btn-contact" type="button" data-contact-open aria-controls="contact-modal">Contactar</button></li>
+        <li><a class="btn btn--mode-light btn--secondary btn--size-l" href="./sources/CV_Omar_lopez.docx" download="CV_Omar_lopez.docx">Descargar CV &darr;</a></li>
+      </ul>
+
+    </div>
+    
+    <div class="mobile-menu-container-b">
+      <!-- Sicial media Links -->
+      <div class="mobile-menu__list-contact">
+        <a class="btn btn--mode-light btn--secondary btn--size-l" href="#"><img src="./img/intagram-icon.svg" alt="Imagen del logo de instagram en el menú móvil"></a>
+        <a class="btn btn--mode-light btn--secondary btn--size-l" href="#"><img src="./img/mail-icon.svg" alt="Imagen del logo de correo en el menú móvil"></a>
+        <a class="btn btn--mode-light btn--secondary btn--size-l" href="#"><img src="./img/whatsapp-icon.svg" alt="Imagen del logo de whatsapp en el menú móvil"></a>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main>
+    <section class="c-hero">
+
+      <video class="c-hero__video" autoplay muted loop playsinline preload="metadata" poster="./img/background-gradient.jpg" aria-hidden="true">
+        <source src="./img/background-gradient.webm" type="video/webm">
+      </video>
+
+      <div class="o-container c-hero__container">
+
+        <div class="c-hero__image-wrapper">
+            <picture class="c-hero__picture">
+              <source media="(max-width: 1024px)" srcset="./img/hola-soy-omar-mobile.png">
+              <img class="c-hero__image" src="./img/hola-soy-omar-desk.png" alt="Omar López, diseñador gráfico">
+            </picture>
+        </div>
+
+        <div class="c-hero__content">
+          <h1 class="c-hero__title heading heading--xl">Diseñador gráfico enfocado en branding, UX/UI y comunicación visual.</h1>
+          <p class="c-hero__description body body--l">Te ayudaré a transformar ideas en soluciones visuales funcionales y coherentes a tu necesidad. Mi enfoque combina investigación, estrategia y diseño centrado en las marcas.</p>
+          <div class="c-hero__actions">
+            <a href="#" class="btn btn--mode-light btn--primary btn--size-l" data-contact-open aria-controls="contact-modal">Hablemos &rarr;</a>
+            <a href="./sources/CV_Omar_lopez.docx" download="CV_Omar_lopez.docx" class="btn btn--mode-light btn--secondary btn--size-l">Descargar CV &darr;</a>
+          </div>
+        </div>
+
+      </div>
+      
+    </section>
+    <!-- Ornament -->
+    <div class="c-text-ticker" aria-hidden="true">
+      <div class="c-text-ticker__track">
+        <div class="c-text-ticker__group">
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+        </div>
+        <div class="c-text-ticker__group">
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+          <span>/</span>
+          <span>DISEÑADOR GRÁFICO PROFESIONAL</span>
+        </div>
+      </div>
+    </div>
+    <!-- Ornament -->
+
+    <!-- Section Experience -->
+    <section class="c-experience">
+      <div class="o-container experience__container">
+
+        <h2 class="c-section__title">ÁREA DE EXPERIENCIA</h2>
+
+        <ul class="experience__list">
+          
+          <li class="experience__item">
+            <a class="experience__link" href="./portfolio.html">
+              <img class="experience__icon" src="./img/Brand.svg" alt="imagen de icono representativo de experiencia en Branding">
+              <span class="body body--l">Branding</span>
+            </a>
+          </li>
+
+          <li class="experience__item">
+            <a class="experience__link" href="./portfolio.html">
+              <img class="experience__icon" src="./img/Ux-ui.svg" alt="imagen de icono representativo de experiencia en UX/UI">
+              <span class="body body--l">UX/UI</span>
+            </a>
+          </li>
+
+          <li class="experience__item">
+            <a class="experience__link" href="./portfolio.html">
+              <img class="experience__icon" src="./img/Editorial.svg" alt="imagen de icono representativo de experiencia editorial">
+              <span class="body body--l">Editorial</span>
+            </a>
+          </li>
+
+          <li class="experience__item">
+            <a class="experience__link" href="./portfolio.html">
+              <img class="experience__icon" src="./img/Social-media.svg" alt="imagen de icono representativo de Social Media">
+              <span class="body body--l">Social Media</span>
+            </a>
+          </li>
+
+          <li class="experience__item">
+            <a class="experience__link" href="./portfolio.html">
+              <img class="experience__icon" src="./img/Illustration.svg" alt="imagen de icono representativo de Ilustración">
+              <span class="body body--l">Ilustración</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Section My process  -->
+    <section class="c-process">
+
+      <div class="process__container">
+        <!-- Ornaments -->
+        <div class="process__ornament__container">
+          <img class="ornament__l" src="./img/bar-code-l.svg" alt="Ornamento de barra de código a la izquierda">
+          <img class="ornament__m" src="./img/bar-code-m.svg" alt="Ornamento de barra de código en el medio">
+          <img class="ornament__r" src="./img/bar-code-r.svg" alt="Ornamento de barra de código a la derecha">
+        </div><!-- Ornaments -->
+
+        <div class="process__content">
+          <h2 class="process__title c-section__title">MI PROCESO</h2>
+
+          <ol class="process__list">
+            <li class="process__item">
+              <div class="process__item--icon">
+                <p class="process__item--number">01</p>
+              </div>
+              <h3 class="process__item--title body body--l">Te escucho</h3>
+              <p class="process__item--description body body--m">Pruebo, ajusto y optimizo propuestas en colaboración
+                contigo.
+              </p>
+            </li>
+
+            <img class="process__ornament__line" src="./img/line.svg" alt="Línea de proceso">
+
+            <li class="process__item">
+              <div class="process__item--icon">
+                <p class="process__item--number">02</p>
+              </div>
+              <h3 class="process__item--title body body--l">Te escucho</h3>
+              <p class="process__item--description body body--m">Pruebo, ajusto y optimizo propuestas en colaboración
+                contigo.
+              </p>
+            </li>
+
+            <img class="process__ornament__line" src="./img/line.svg" alt="Línea de proceso">
+
+            <li class="process__item">
+              <div class="process__item--icon">
+                <p class="process__item--number">03</p>
+              </div>
+              <h3 class="process__item--title body body--l">Te escucho</h3>
+              <p class="process__item--description body body--m">Pruebo, ajusto y optimizo propuestas en colaboración
+                contigo.
+              </p>
+            </li>
+
+            <img class="process__ornament__line" src="./img/line.svg" alt="Línea de proceso">
+
+            <li class="process__item">
+              <div class="process__item--icon">
+                <p class="process__item--number">04</p>
+              </div>
+              <h3 class="process__item--title body body--l">Te escucho</h3>
+              <p class="process__item--description body body--m">Pruebo, ajusto y optimizo propuestas en colaboración
+                contigo.
+              </p>
+            </li>
+
+            <img class="process__ornament__line" src="./img/line.svg" alt="Línea de proceso">
+
+            <li class="process__item">
+              <div class="process__item--icon">
+                <p class="process__item--number">05</p>
+              </div>
+              <h3 class="process__item--title body body--l">Te escucho</h3>
+              <p class="process__item--description body body--m">Pruebo, ajusto y optimizo propuestas en colaboración
+                contigo.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+
+        <!-- Ornaments -->
+        <div class="process__ornament__container">
+          <img class="ornament__l" src="./img/bar-code-l.svg" alt="Ornamento de barra de código a la izquierda">
+          <img class="ornament__m" src="./img/bar-code-m.svg" alt="Ornamento de barra de código en el medio">
+          <img class="ornament__r" src="./img/bar-code-r.svg" alt="Ornamento de barra de código a la derecha">
+        </div><!-- Ornaments -->
+
+      </div>
+    </section>
+
+    <section class="c-cta">
+
+      <div class="o-container cta__container">
+        <!-- Ornaments -->
+        <div class="cta__ornament--l"></div><!-- Ornaments -->
+
+        <div class="cta__content">
+
+          <h2 class="cta__title c-section__title">HÁBLAME DE TU PRÓXIMO PROYECTO</h2>
+          <p class="cta__description body body--m">Estoy listo para ayudarte a convertir tus ideas en soluciones visuales que generen
+            impacto.</p>
+          <a href="#" class="cta__btn btn btn--mode-light btn--primary btn--size-l" data-contact-open aria-controls="contact-modal">Hablemos &rarr;</a>
+        
+        </div>
+
+        <!-- Ornaments -->
+        <div class="cta__ornament--r"></div><!-- Ornaments -->
+      </div>
+    </section>
+
+  </main>
+  
+  
+  <div class="c-contact-modal" id="contact-modal" aria-hidden="true" inert>
+
+    <div class="c-contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" aria-describedby="contact-modal-description" tabindex="-1">
+
+      <div class="c-contact-modal__top">
+      <button class="c-contact-modal__close btn btn--mode-light btn--tertiary btn--size-m" type="button" aria-label="Cerrar contacto" data-contact-close><img class="c-contact-modal__close-icon" src="./img/x-icon.svg" alt=""></button>
+      </div>
+
+      <div class="c-contact-modal__content">
+
+        <section class="c-contact-modal__intro">
+          <h2 class="c-contact-modal__title heading heading--xl" id="contact-modal-title">¡Hablemos!</h2>
+          <p class="c-contact-modal__description body body--l" id="contact-modal-description">Elige el canal que prefieras para contarme sobre tu proyecto o idea.</p>
+        </section>
+
+        <section class="c-contact-modal__contact-links">
+          <h3 class="c-contact-modal__heading c-section__title" id="contact-modal-write">Escríbeme</h3>
+          <div class="c-contact-modal__links">
+            <a class="btn--two-icons btn btn--mode-light btn--secondary btn--size-m" href="mailto:omardgraf05@gmail.com">
+              <span class="btn__label">
+                <img class="c-contact-modal__icon" src="./img/mail-icon.svg" alt="">
+                <span>omardgraf05@gmail.com</span>
+              </span>
+              <span class="btn__icon btn__icon--right" aria-hidden="true">&rarr;</span>
+            </a>
+
+            <a class="btn--two-icons btn btn--mode-light btn--secondary btn--size-m" href="https://wa.me/573004583706">
+              <span class="btn__label">
+                <img class="c-contact-modal__icon" src="./img/whatsapp-icon.svg" alt="">
+                <span>+57 300458 3706</span>
+              </span>
+              <span class="btn__icon btn__icon--right" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="c-contact-modal__social-links">
+          <h3 class="c-contact-modal__heading c-section__title" id="contact-modal-follow">Sígueme</h3>
+          <a class="btn--two-icons btn btn--mode-light btn--secondary btn--size-m" href="https://www.instagram.com/odgraf" target="_blank" rel="noopener noreferrer">
+            <span class="btn__label">
+              <img class="c-contact-modal__icon" src="./img/intagram-icon.svg" alt="">
+              <span>odgraf</span>
+            </span>
+            <span class="btn__icon btn__icon--right" aria-hidden="true">&rarr;</span>
+          </a>
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+
+  
+  <button type="button" id="btn-up" class="btn-up btn btn--mode-light btn--primary btn--size-l" aria-label="Subir al inicio">&uarr;</button>
+  
+  <footer class="c-footer">
+
+    <div class="o-container fotter__container">
+
+      <div class="fotter__contact">
+        <a class="btn--fotter" href="https://www.instagram.com/odgraf">
+          <img class="btn--fotter--icon" src="./img/intagram-icon.svg" alt="Imagen del logo de instagram">
+          <p class="">odgraf</p>
+        </a>
+        <a class="btn--fotter" href="mailto:omardgraf05@gmail.com">
+          <img class="btn--fotter--icon" src="./img/mail-icon.svg" alt="Imagen de icono de correo">
+          <p class="">omardgraf05@gmail.com</p>
+        </a>
+      </div>
+
+      <img class="fotter__logo" src="./img/Logo-ODGRAF.svg" alt="imagen de Logo de la marca ODGRAF">
+
+      <p class="fotter__copy-right caption">© 2026 OMAR LOPEZ ESTRADA - DISEÑADOR GRÁFICO.<br>Todos los derechos reservados.</p>
+    </div>
+  
+  </footer>
+</body>
+
+</html>
