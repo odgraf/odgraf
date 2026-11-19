@@ -1,0 +1,142 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    /* Compatibilidad con Safari */
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transition: background-color 200ms ease, backdrop-filter 200ms ease;
+}
+
+.header.header--scrolled {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--spacing-80);
+
+}
+
+.header__logo--link {
+    display: flex;
+    width: 10rem;
+}
+
+/* Navigation bar ========================= */
+.header__nav-list {
+    display: flex;
+    gap: var(--spacing-8);
+}
+
+.header .header__menu-toggle {
+  display: none;
+}
+
+
+/* Navigation mobile bar =================== */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-container-a {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    width: 100%;
+    padding: 2.4rem;
+}
+
+.mobile-menu-container-b {
+    padding: 2.4rem;
+}
+
+.mobile-menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu__close-icon {
+   width: 1.6rem;
+   height: auto;
+}
+
+
+/* Navigation mobile buttons =================== */
+.mobile-menu__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.mobile-menu__list a{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* Navigation mobile Contac buttons =================== */
+.mobile-menu__list-contact {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.mobile-menu__list-contact a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Media Query /////////////////////////////// */
+@media (max-width: 768px) {
+
+    .header__nav{
+        display: none;
+    }
+
+    .header .header__menu-toggle{
+        display: inline-flex;
+    }
+    
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        justify-content: space-between;
+        height: 100%;
+
+        position: fixed;
+        inset: 0;
+        z-index: 101;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 300ms ease, visibility 300ms ease;
+    }
+
+    .mobile-menu.is-open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .mobile-menu__logo {
+        display: flex;
+        width: 10rem;
+    }
+}

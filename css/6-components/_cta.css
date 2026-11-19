@@ -1,0 +1,75 @@
+.c-cta {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 2.4rem 0 2.4rem 0;
+    background-color: var(--color-surface);
+}
+
+.cta__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4.8rem 0;
+}
+
+.cta__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cta__title{
+    width: 30%;
+}
+
+.cta__description {
+    width: 35%;
+}
+
+.cta__btn {
+    width: 30%;
+}
+
+/* ===========================
+Media queries 
+===========================*/
+@media (max-width:1024px){
+    
+    .cta__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .cta__title, .cta__description, .cta__btn { width: 100%;}
+}
+
+
+
+@media (max-width: 768px) {
+  .cta__container {
+    gap: 0.8rem;
+    padding: 4.8rem 2.4rem;
+  }
+
+  .cta__ornament--l, .cta__ornament--r {
+    flex: 0 0 10px;
+  }
+
+  .cta__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cta__title, .cta__description, .cta__btn { width: 100%;}
+}

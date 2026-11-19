@@ -1,0 +1,269 @@
+/* Buttons ========================= */
+.btn {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-8);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    padding: var(--spacing-8) var(--spacing-16);
+    border: 1px solid transparent;
+    border-radius: var(--radius-4);
+    white-space: nowrap;  /* Evita que el texto de la etiqueta se parta en dos líneas */
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        outline-color var(--transition-fast);
+}
+
+.btn--size-l {
+    font-size: var(--fs-action-l);
+    min-height: 4.5rem;
+}
+
+.btn--size-m {
+    font-size: var(--fs-action-m);
+    height: 3.5rem;
+}
+
+.btn--size-s {
+    font-size: var(--fs-action-s);
+    height: 3.2rem;
+}
+
+
+/* =========================
+   DARK MODE
+   ========================= */
+   /* Primary (Dark mode)*/
+.btn--mode-dark.btn--primary {
+    background-color: var(--color-primary);
+    border-color: transparent;
+    color: var(--color-white);
+}
+
+.btn--mode-dark.btn--primary:hover {
+    background-color: var(--color-grey-dark);
+}
+
+.btn--mode-dark.btn--primary:active {
+    background-color: var(--color-orange-dark);
+    color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--primary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+/* Secondary (Dark mode)*/
+.btn--mode-darke.btn--secondary {
+    background-color: transparent;
+    border-color: var(--color-orange-dark);
+    color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--secondary:hover {
+    border-color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--secondary:active {
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--secondary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+/* Tertiary (Dark mode)*/
+.btn--mode-dark.btn--tertiary {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--tertiary:hover {
+    border-color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--tertiary:active {
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-primary);
+}
+
+.btn--mode-dark.btn--tertiary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+   /* Primary (Light mode)*/
+.btn--mode-light.btn--primary {
+    background-color: var(--color-night);
+    border-color: var(--color-night);
+    color: var(--color-white);
+}
+
+.btn--mode-light.btn--primary:hover {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.btn--mode-light.btn--primary:active {
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-orange-dark);
+    color: var(--color-white);
+}
+
+.btn--mode-light.btn--primary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+   /* Secondary (Light mode)*/
+.btn--mode-light.btn--secondary {
+    background-color: transparent;
+    border-color: var(--color-stroke);
+    color: var(--color-night);
+}
+
+.btn--mode-light.btn--secondary:hover {
+    border-color: var(--color-night);
+}
+
+.btn--mode-light.btn--secondary:active {
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-orange-dark);
+    color: var(--color-night);
+}
+
+.btn--mode-light.btn--secondary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+   /* Tertiary (Light mode)*/
+.btn--mode-light.btn--tertiary {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-night);
+}
+
+.btn--mode-light.btn--tertiary:hover {
+    border-color: var(--color-night);
+}
+
+.btn--mode-light.btn--tertiary:active {
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-orange-dark);
+    color: var(--color-night);
+}
+
+.btn--mode-light.btn--tertiary:focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+}
+
+
+
+/* Buttons with two icons =========================*/
+.btn--two-icons {
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+}
+
+.btn--two-icons.btn--mode-light.btn--secondary {
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    outline-color var(--transition-fast);
+}
+
+.btn--two-icons.btn--mode-light.btn--secondary .btn__icon {
+  transition: transform var(--transition-fast);
+}
+
+
+.btn--two-icons.btn--mode-light.btn--secondary:hover {
+  border-color: var(--color-night);
+}
+
+.btn--two-icons.btn--mode-light.btn--secondary:hover .btn__icon--right {
+  transform: translateX(0.3rem);
+}
+
+.btn--two-icons.btn--mode-light.btn--secondary:active {
+  background-color: var(--color-orange-dark);
+  border-color: var(--color-orange-dark);
+  color: var(--color-night);
+}
+
+.btn--two-icons.btn--mode-light.btn--secondary:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+
+.btn__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn__icon {
+  flex: 0 0 auto;
+  font-size: var(--fs-body-m);
+}
+
+.btn__icon--right {
+  margin-left: auto;
+}
+
+
+
+/* Footer links ========================= */
+.btn--fotter {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-action-m);
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+
+.btn--fotter:hover {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.btn--fotter:active {
+    color: var(--color-orange-dark);
+    border-bottom: 1px solid var(--color-orange-dark);
+}
+
+.btn--fotter:focus-visible {
+    color: var(--color-orange-dark);
+    outline: 2px solid var(--color-orange-dark);
+    border-radius: var(--radius-4);
+}
+
+.btn--fotter--icon {
+    width: 1.6rem;
+    height: auto;
+}
+
+

@@ -1,0 +1,9 @@
+/* 4-ELEMENTS / _body.css */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: 1.5;
+}

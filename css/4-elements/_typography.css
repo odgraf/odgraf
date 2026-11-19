@@ -1,0 +1,114 @@
+/* 4-ELEMENTS / _typography.css */
+
+/*General fonts*/
+
+
+/* Bloque .heading */
+.heading {
+  font-family: var(--ff-heading);
+  font-style: normal;
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+/* Modificadores de .heading */
+.heading--display {
+  font-size: var(--fs-display);
+}
+
+.heading--xl {
+  font-size: var(--fs-heading-xl);
+}
+
+.heading--l {
+  font-size: var(--fs-heading-l);
+}
+
+.heading--m {
+  font-size: var(--fs-heading-m);
+}
+
+.heading--s {
+  font-size: var(--fs-heading-s);
+}
+
+/* Bloque .body */
+.body {
+  font-family: var(--ff-body);
+  font-style: normal;
+  line-height: var(--lh-body);
+  margin: 0;
+}
+
+/* Modificadores de .body */
+.body--l {
+  font-size: var(--fs-body-l);
+  font-weight: var(--fw-regular);
+}
+
+.body--m {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-regular);
+}
+
+/* Bloque independiente .caption */
+.caption {
+  font-family: var(--ff-body);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA: TEXTOS INTERACTIVOS (Componentes / UI)
+   ========================================================================== */
+
+/* Bloque .action (para botones, enlaces o llamadas a la acción) */
+.action {
+  font-family: var(--ff-body);
+  line-height: var(--lh-action);
+}
+
+.action--l {
+  font-size: var(--fs-action-l);
+  font-weight: var(--fw-medium);
+}
+
+.action--m {
+  font-size: var(--fs-action-m);
+  font-weight: var(--fw-regular);
+}
+
+.action--s {
+  font-size: var(--fs-action-s);
+  font-weight: var(--fw-regular);
+}
+
+/* Bloque .label (para etiquetas, badges o chips) */
+.label {
+  font-family: var(--ff-body);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}
+
+/* ==========================================================================
+  SECTION TITLE STYLES
+   ========================================================================== */
+
+.c-section__title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading-l);
+  font-weight: var(--fw-black);
+  color: var(--color-primary);
+  line-height: var(--lh-heading);
+}
+
+.c-section__subtitle {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading-m);
+  font-weight: var(--fw-black);
+  color: var(--color-primary);
+  line-height: var(--lh-heading);
+}

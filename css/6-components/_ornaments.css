@@ -1,0 +1,74 @@
+/* Reusable scrolling text ticker */
+.c-text-ticker {
+  width: 100%;
+  height: 2.6rem;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--ff-heading);
+  font-size: 1.2rem;
+  font-weight: var(--fw-black);
+}
+
+.c-text-ticker__track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: text-ticker-scroll 30s linear infinite;
+}
+
+.c-text-ticker__group {
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+
+.c-text-ticker__group span {
+  flex: none;
+  padding-inline: var(--spacing-16);
+  white-space: nowrap;
+}
+
+@keyframes text-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-text-ticker__track {
+    animation: none;
+  }
+}
+
+
+/* Process section Ornaments */
+.process__ornament__line {
+    flex: 0 0 2.2rem;
+}
+
+.process__ornament__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+/* cta section Ornaments */
+.cta__ornament--l {
+    width: 10px;
+    height: 100%;
+    border: 1px solid black;
+    border-right: 0;
+}
+
+.cta__ornament--r {
+    width: 10px;
+    height: 100%;
+    border: 1px solid black;
+    border-left: 0;
+}

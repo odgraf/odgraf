@@ -1,0 +1,105 @@
+/* ===========================
+Section Hero
+===========================*/
+.c-portfolio-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 36rem;
+  padding-block: var(--spacing-64) var(--spacing-24);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background-color: #fff;
+  width: 100%;
+  /*background-image: url('../../img/Bg-main-banner-lg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+}
+
+.c-portfolio-hero__video{
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.c-portfolio-hero__container {
+  position: relative;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-24);
+}
+
+.c-portfolio-hero__title,
+.c-portfolio-hero__description {
+  color: var(--color-night);
+}
+
+.c-portfolio-hero__title {
+  max-width: 40rem;
+}
+
+.c-portfolio-hero__description {
+  max-width: 52rem;
+}
+
+
+
+/* ===========================
+Section Projects
+===========================*/
+.c-portfolio-projects__container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+    justify-content: end;
+    padding-block: var(--spacing-24);
+}
+
+
+
+/* ===========================
+Media queries 
+===========================*/
+
+@media (max-width: 768px) {
+  /*Hero content*/
+  .c-portfolio-hero {
+    min-height: 40rem;
+    padding-block: var(--spacing-80) var(--spacing-24);
+    background-position: center;
+  }
+
+  .c-portfolio-hero__container {
+    gap: var(--spacing-16);
+  }
+
+  .c-portfolio-hero__title,
+  .c-portfolio-hero__description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /*Proyects content*/
+  .c-portfolio-projects__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .c-portfolio-projects__container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

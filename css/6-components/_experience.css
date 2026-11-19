@@ -1,0 +1,77 @@
+.c-experience {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.experience__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-32);
+    align-items: center;
+
+    text-align: center;
+    padding: var(--spacing-48) 0;
+}
+
+.experience__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-8);
+    width: 100%;
+}
+
+
+/* ==================================
+CARDS
+=================================== */
+.experience__item {
+    flex: 1 1 15rem;
+    max-width: 21.4rem;
+}
+
+.experience__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-8);
+
+    width: 100%;
+    min-width: 15rem;
+    min-height: 15rem;
+
+    border: 0.1rem solid var(--color-border);
+    border-radius: 0.4rem;
+}
+
+.experience__link:hover {
+    border: 0.1rem solid var(--color-primary);
+    background-color: var(--color-white);
+}
+
+.experience__icon {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.8rem;
+}
+
+
+/* Media Query /////////////////////////////// */
+@media (max-width: 1024px) {
+
+    .experience__item {
+        flex: 0 1 21.4rem;
+        max-width: 21.4rem;
+    }
+
+    .experience__list {
+        width: fit-content;
+        max-width: 100%;
+        justify-content: center;
+    }
+}

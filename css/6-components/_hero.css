@@ -1,0 +1,123 @@
+/* 6-COMPONENTS / _hero.css */
+.c-hero {
+  display: flex;
+  justify-content: center;
+
+  position: relative; /*Necesario para ubicar contenido en posición absoluta solamente dentro de este contenedor*/
+  isolation: isolate; /*Esto permite que el video y demás elementos estén siempre dentro de este contenedor. Es decir, crea un contexto de apilamiento propio.*/
+  overflow: hidden; /*recorta cualquier parte del video que sobresalga de este contenedor*/
+
+  background-color: #ffffff; /*Color de respaldo*/
+  width: 100%;
+  height: 72.0rem;
+}
+
+.c-hero__video {
+  position: absolute; /*Saca del flujo a este elemento y permite pegar el video dentro del contenedor padre*/
+  inset: 0; /*Esto es igual a (top: 0; right: 0; bottom: 0; left: 0;)*/
+  z-index: 0;
+  display: block; /*evita espacios que puedan aparecer debajo de elementos multimedia en línea*/
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*amplía el video para llenar el área.*/
+  pointer-events: none; /*permite que los clics atraviesen el video y lleguen a botones o enlaces del contenido.*/
+}
+
+.c-hero__container {
+  position: relative; /*Mantiene este el elemento en el flujo, pero permite asignarle un z-index */
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  padding-block: 5rem;
+}
+
+/* Container 01 on main banner. Image: "Hola, soy Omar")" */
+.c-hero__image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.c-hero__picture {
+  display: block;
+  width: 100%;
+}
+
+/*//////////////////////////////
+PENDIENTE POR REVISAR
+//////////////////////////////*/
+.c-hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*//////////////////////////////
+//////////////////////////////*/
+
+/* Container 02 on main banner. Content  */
+.c-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  width: 30%;
+  height: auto;
+}
+
+/* Buttons (Actions) */
+.c-hero__actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--spacing-16);
+}
+
+/* Layout for Desktop (Breakpoints of =< 1024px) */
+@media (max-width: 1024px) {
+  
+  .c-hero {
+    height: auto;
+  }
+
+  .c-hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-24);
+  }
+
+  .c-hero__image-wrapper, .c-hero__content {
+    width: 100%;
+  }
+
+  .c-hero__image {
+    width: 100%;
+}
+
+  .c-hero__actions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--spacing-16);
+}
+
+.c-hero__actions > a {
+  width: 100%;
+}
+}
+
+
+/* Layout for Desktop (Breakpoints of =< 425px) */
+@media (max-width: 425px) {
+
+    .c-hero__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-16);
+  }
+}

@@ -1,0 +1,87 @@
+.tag{
+    display: inline-flex;  /* Se comporta como elemento en línea pero con superpoderes de Flexbox */
+    gap: 0.8rem;
+    align-items: center;
+
+    font-family: var(--ff-body);
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-body);
+
+    padding: 0.6rem 0.8rem;
+    color: var(--color-primary);
+    width: fit-content; /* Se ajusta con precisión al tamaño del contenido */
+    white-space: nowrap;  /* Evita que el texto de la etiqueta se parta en dos líneas */
+
+    border: 1px solid var(--color-stroke);
+}
+
+.tag--l{
+    border-radius: 0.4rem;
+    height: 3.6rem;
+}
+
+.tag--s{
+    border-radius: 0.2rem;
+    height: 2.1rem;
+}
+
+/* ====================================
+Cards on Portfolio
+=======================================*/
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    border: 1px solid var(--color-stroke);
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.project-card__img{
+    width: 100%;
+
+}
+.project-card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 1.6rem;
+    background-color: var(--color-white);
+}
+
+.project-card__content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.project-card__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+.project-card__actions > a {
+  width: 100%;
+}
+
+
+/* ===========================
+Media queries 
+===========================*/
+
+
+@media (max-width: 768px) {
+       
+    .project-card__actions {
+        display: flex;
+        flex-direction: column;
+    }
+  
+}

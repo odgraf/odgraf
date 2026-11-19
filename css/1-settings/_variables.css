@@ -1,0 +1,135 @@
+/* 1-SETTINGS / _variables.css
+ * Design Tokens y Custom Properties */
+
+:root {
+  /* ==========================================================================
+ 1. COLORES */
+
+  /* Brand Colors */
+  --color-night: #0C090A;
+  --color-orange: #FF7500;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F9F9F9;
+  --color-grey-dark: #242223;
+  --color-stroke: #D4D4D4;
+  --color-orange-dark: #BF5800;
+  --color-orange-darker: #592900;
+
+  /* Theme: Light-mode (Default) */
+  --color-primary: var(--color-night);
+  --color-secondary: var(--color-orange);
+  --color-surface: var(--color-gray-light);
+  --color-background: var(--color-white);
+  --color-border: var(--color-stroke);
+  --color-text-primary: var(--color-night);
+  --color-text-secondary: var(--color-night);
+  --color-link: var(--color-orange);
+
+  /* Theme: Orange-mode (Hero / Highlights) */
+  --color-orange-mode-bg: var(--color-orange);
+  --color-orange-mode-surface: var(--color-orange-dark);
+  --color-orange-mode-text: var(--color-night);
+  --color-orange-mode-link: var(--color-white);
+
+  /* ==========================================================================
+ 2. TIPOGRAFÍA */
+
+  /* Font Families */
+  --ff-heading: "Unbounded", sans-serif;
+  --ff-body: "Roboto", sans-serif;
+
+  /* Font Weights */
+  --fw-extra-light: 200;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-black: 900;
+
+  /* Font Sizes & Line Heights (Base 1rem = 10px con html 62.5%) */
+  --fs-display: 8rem;
+  /* 80px */
+  --fs-heading-xl: 3.2rem;
+  /* 32px */
+  --fs-heading-l: 2.4rem;
+  /* 24px */
+  --fs-heading-m: 1.6rem;
+  /* 16px */
+  --fs-heading-s: 1.2rem;
+  /* 12px */
+
+  --fs-body-l: 1.8rem;
+  /* 18px */
+  --fs-body-m: 1.6rem;
+  /* 16px */
+  --fs-caption: 1.2rem;
+  /* 12px */
+
+  /*interactive text (For buttons and links)*/
+  --fs-action-l: 1.8rem;
+  /* 18px */
+  --fs-action-m: 1.6rem;
+  /* 16px */
+  --fs-action-s: 1.4rem;
+  /* 14px */
+  --fs-label: 1.2rem;
+  /* 12px */
+
+  /* Line Heights */
+  --lh-heading: 1.1;
+  --lh-body: 1.5;
+  --lh-action: 1.2;
+
+  /* ==========================================================================
+ 3. SPACING (Multiples of 8) */
+  --spacing-4: 0.4rem;
+  /* 4px */
+  --spacing-8: 0.8rem;
+  /* 8px */
+  --spacing-16: 1.6rem;
+  /* 16px */
+  --spacing-24: 2.4rem;
+  /* 24px */
+  --spacing-32: 3.2rem;
+  /* 32px */
+  --spacing-48: 4.8rem;
+  /* 48px */
+  --spacing-64: 6.4rem;
+  /* 64px */
+  --spacing-80: 8.0rem;
+  /* 80px */
+  --spacing-96: 9.6rem;
+  /* 96px */
+  --spacing-128: 12.8rem;
+  /* 128px */
+
+  /* Spacing between sections at break points */
+  --section-gap-mobile: 7.2rem;
+  /* 72px */
+  --section-gap-tablet: 9.6rem;
+  /* 96px */
+  --section-gap-desktop: 12.0rem;
+  /* 120px */
+
+  /* ==========================================================================
+ 4. LAYOUT & BREAKPOINTS */
+  --container-maxw-1280: 128.0rem;
+  /* 1280px */
+  --container-w-1200: 120.0rem;
+  /* 1200px */
+  --container-w-960: 96.0rem;
+  /* 960px */
+  --container-w-720: 72.0rem;
+  /* 720px */
+
+  /* ==========================================================================
+ 5. BORDES & RADIUS */
+  --radius-none: 0;
+  --radius-4: 0.4rem;
+  /* 4px */
+
+  /* ==========================================================================
+ 6. TRANSICIONES (Motion) */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+
+}

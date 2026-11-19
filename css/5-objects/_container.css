@@ -1,0 +1,14 @@
+/* 5-OBJECTS / _container.css */
+
+.o-container {
+  width: 100%;
+  max-width: var(--container-maxw-1280);
+  margin-inline: auto;
+  padding-inline: var(--spacing-24);
+}
+
+/* ===========================
+Media queries 
+===========================*/
+
+/*@media (max-width: 1024px) {}*/

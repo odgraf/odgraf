@@ -1,0 +1,88 @@
+.c-process {
+  width: 100%;
+  margin-inline: auto;
+  background-color: #fff;
+  background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.process__container {
+  display: flex;
+  flex-direction: column;
+  /*gap: none;*/
+  justify-content: space-between;
+  align-items: center;
+  /*align-content: none;*/
+  width: 100%;
+  max-width: 128rem;
+  margin-inline: auto;
+  padding: 4.8rem 1.6rem;
+}
+
+.process__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 5rem;
+}
+
+/* Cards for Process items */
+.process__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: 2.4rem 0 5rem 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.process__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  gap: 0.8rem;
+  flex-shrink: 0;
+  flex-basis: 22rem;
+  align-items: center;
+  text-align: center;
+}
+
+/*.process__item--title {}*/
+
+.process__item--description {
+  font-size: 1.6rem;
+}
+
+/* Icons for process items */
+.process__item--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 0.1rem solid #000000;
+  border-radius: 0.4rem;
+
+  font-family: var(--ff-heading);
+  font-style: normal;
+  font-weight: var(--fw-extra-light);
+  line-height: var(--lh-heading);
+  font-size: var(--fs-heading-l);
+  color: #000000;
+}
+
+/* ================================
+   MEDIA QUERIES
+   ================================ */

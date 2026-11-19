@@ -1,0 +1,68 @@
+.c-footer{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 1.6rem 0 1.6rem 0;
+    background-color: #F4F4F4;
+}
+
+.fotter__container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.fotter__contact{
+    display: flex;
+    gap: 1.6rem;
+}
+
+.fotter__logo {
+    max-width: 12rem;
+    height: auto;
+}
+
+.btn-up{
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.btn-up.is-visible{
+    display: inline-flex;
+}
+
+/* ===========================
+Media queries 
+===========================*/
+
+@media (max-width:1024px){
+    
+    .fotter__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        justify-content: center;
+        text-align: center;
+        padding: 2.4rem;
+    }
+    
+    .fotter__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .fotter__logo{
+        /* Mueve el logo visualmente al primer lugar */
+        order: -1;
+        margin-inline: auto;
+    }
+
+
+}

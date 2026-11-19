@@ -1,0 +1,110 @@
+.mobile-menu__btn-contact{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.c-contact-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 2.4rem;
+  background: rgb(0 0 0 / 80%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.c-contact-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.c-contact-modal__dialog {
+  display: flex;
+  flex-direction:column;
+  justify-content: start;
+  gap: 4.8rem;
+
+  position: relative;
+  z-index: 1;
+  width: min(100%, 58.6rem);
+  height: auto;
+  max-height: calc(100vh - 4.8rem);
+  overflow-y: auto;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  background: var(--color-background);
+  color: var(--color-night);
+  pointer-events: auto;
+}
+
+.c-contact-modal__content{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  gap: 3.2rem;
+  width: 100%;
+  height: 100%;
+  padding: 4.8rem;
+}
+
+.c-contact-modal__intro, .c-contact-modal__contact-links, .c-contact-modal__social-links{
+  display:flex;
+  flex-direction:column;
+  gap: 1.6rem;
+}
+
+.c-contact-modal__top{
+  display:flex;
+  justify-content:end;
+  width: 100%;
+}
+
+.c-contact-modal__close-icon {
+  width: 1.6rem;
+  height: auto;
+}
+
+.c-contact-modal__links{
+  display: flex;
+  flex-direction: column;
+  gap:0.8rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .c-contact-modal__dialog{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    border-radius: 0; /* Sin esquinas redondeadas para ocupar el 100% */
+    padding: 2.4rem;
+  }
+
+  .c-contact-modal {
+    padding: 0;
+    background: var(--color-background);
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  .c-contact-modal__content{
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-contact-modal {
+    transition: none;
+  }
+}
