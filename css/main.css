@@ -37,5 +37,6 @@
 
 /*Modal contact*/
 @import url('./6-components/modal-contact.css');
+@import url('./6-components/viewer.css');
 /* 7. Utilities (Helpers de alta especificidad) 
 @import url('./7-utilities/helpers.css');*/

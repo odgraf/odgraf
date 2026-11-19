@@ -1,0 +1,114 @@
+/* Reusable image viewer */
+
+.c-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-48);
+  background: rgb(12 9 10 / 94%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition-fast),
+    visibility var(--transition-fast);
+}
+
+.c-viewer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-viewer__viewport {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stroke) transparent;
+  touch-action: pan-x pan-y;
+}
+
+.c-viewer__image {
+  display: block;
+  flex: none;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+  user-select: none;
+  transition: width var(--transition-fast), height var(--transition-fast);
+}
+
+.c-viewer__image.is-zoomed {
+  width: auto;
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+
+.c-viewer__close,
+.c-viewer__navigation {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-8);
+  color: var(--color-white);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.c-viewer__close {
+  top: var(--spacing-16);
+  right: var(--spacing-16);
+  font-size: var(--fs-heading-l);
+  opacity: 0.65;
+}
+
+.c-viewer__navigation {
+  top: 50%;
+  font-size: var(--fs-heading-l);
+  transform: translateY(-50%);
+}
+
+.c-viewer__navigation--previous {
+  left: var(--spacing-16);
+}
+
+.c-viewer__navigation--next {
+  right: var(--spacing-16);
+}
+
+.c-viewer__close:hover,
+.c-viewer__navigation:hover {
+  opacity: 1;
+}
+
+.c-viewer__close:focus-visible,
+.c-viewer__navigation:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .c-viewer {
+    padding: var(--spacing-16);
+  }
+
+  .c-viewer__navigation {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-viewer,
+  .c-viewer__viewport,
+  .c-viewer__image {
+    transition: none;
+  }
+}
