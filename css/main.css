@@ -1,41 +1,41 @@
 /* /css/main.css */
 
 /* 1. Settings (Variables CSS nativas) */
-@import url('./1-settings/_variables.css');
+@import url('./1-settings/variables.css');
 
 /* 2. Tools (No suele usarse tanto en CSS nativo sin preprocesador, pero si tienes funciones/custom media) */
 /* @import url('./2-tools/tools.css'); */
 
 /* 3. Generic (Resets, normalize, box-sizing) */
-@import url('./3-generic/_reset.css');
+@import url('./3-generic/reset.css');
 
 /* 4. Base (Estilos a elementos sin clases: body, h1, a, p) */
-@import url('./4-elements/_body.css');
-@import url('./4-elements/_typography.css');
+@import url('./4-elements/body.css');
+@import url('./4-elements/typography.css');
 
 /* 5. Objects (Estructuras y layouts sin diseño visual) */
-@import url('./5-objects/_container.css');
+@import url('./5-objects/container.css');
 
 /* 6. Components (Componentes visuales BEM: botones, cards, nav) */
-@import url('./6-components/_header.css');
-@import url('./6-components/_hero.css');
-@import url('./6-components/_buttons.css');
-@import url('./6-components/_experience.css');
-@import url('./6-components/_process.css');
-@import url('./6-components/_ornaments.css');
-@import url('./6-components/_cta.css');
-@import url('./6-components/_footer.css');
-@import url('./6-components/_cards.css');
+@import url('./6-components/header.css');
+@import url('./6-components/hero.css');
+@import url('./6-components/buttons.css');
+@import url('./6-components/experience.css');
+@import url('./6-components/process.css');
+@import url('./6-components/ornaments.css');
+@import url('./6-components/cta.css');
+@import url('./6-components/footer.css');
+@import url('./6-components/cards.css');
 
 /*Portfolio*/
-@import url('./6-components/_portfolio.css');
-@import url('./6-components/_filters.css');
+@import url('./6-components/portfolio.css');
+@import url('./6-components/filters.css');
 
 /*Projects*/
-@import url('./6-components/_project-hero.css');
-@import url('./6-components/_project-body.css');
+@import url('./6-components/project-hero.css');
+@import url('./6-components/project-body.css');
 
 /*Modal contact*/
-@import url('./6-components/_modal-contact.css');
+@import url('./6-components/modal-contact.css');
 /* 7. Utilities (Helpers de alta especificidad) 
 @import url('./7-utilities/helpers.css');*/
