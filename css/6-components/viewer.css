@@ -20,34 +20,12 @@
   visibility: visible;
 }
 
-.c-viewer__viewport {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-stroke) transparent;
-  touch-action: pan-x pan-y;
-}
-
 .c-viewer__image {
   display: block;
-  flex: none;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  cursor: zoom-in;
   user-select: none;
-  transition: width var(--transition-fast), height var(--transition-fast);
-}
-
-.c-viewer__image.is-zoomed {
-  width: auto;
-  max-width: none;
-  max-height: none;
-  cursor: zoom-out;
 }
 
 .c-viewer__close,
@@ -107,8 +85,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .c-viewer,
-  .c-viewer__viewport,
-  .c-viewer__image {
+  .c-viewer {
     transition: none;
   }
 }

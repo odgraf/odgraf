@@ -228,7 +228,6 @@ if (filterButtons.length && projectCards.length) {
 /* REUSABLE IMAGE VIEWER */
 const imageViewer = document.querySelector("#image-viewer");
 const imageViewerImage = imageViewer?.querySelector("[data-viewer-image]");
-const viewerViewport = imageViewer?.querySelector("[data-viewer-viewport]");
 const viewerCloseButton = imageViewer?.querySelector("[data-viewer-close]");
 const viewerPreviousButton = imageViewer?.querySelector("[data-viewer-prev]");
 const viewerNextButton = imageViewer?.querySelector("[data-viewer-next]");
@@ -240,6 +239,7 @@ const projectGalleryImages = [
 let activeViewerIndex = 0;
 let viewerTouchStartX = 0;
 let viewerReturnFocus = null;
+let viewerTouchStartY = 0;
 
 function showViewerImage(index) {
   if (!imageViewerImage || projectGalleryImages.length === 0) return;
@@ -251,26 +251,6 @@ function showViewerImage(index) {
 
   imageViewerImage.src = sourceImage.currentSrc || sourceImage.src;
   imageViewerImage.alt = sourceImage.alt;
-  imageViewerImage.classList.remove("is-zoomed");
-  imageViewerImage.style.width = "";
-  imageViewerImage.style.height = "";
-  viewerViewport?.scrollTo({ top: 0, left: 0 });
-}
-
-function toggleViewerZoom() {
-  if (!imageViewerImage || !viewerViewport) return;
-
-  const isZoomed = imageViewerImage.classList.toggle("is-zoomed");
-
-  if (isZoomed) {
-    const scale = 1.8;
-    imageViewerImage.style.width = `${imageViewerImage.naturalWidth * scale}px`;
-    imageViewerImage.style.height = `${imageViewerImage.naturalHeight * scale}px`;
-  } else {
-    imageViewerImage.style.width = "";
-    imageViewerImage.style.height = "";
-    viewerViewport.scrollTo({ top: 0, left: 0 });
-  }
 }
 
 function openImageViewer(index) {
@@ -302,10 +282,6 @@ projectGalleryImages.forEach((image, index) => {
   image.addEventListener("click", () => openImageViewer(index));
 });
 
-imageViewerImage?.addEventListener("click", () => {
-  toggleViewerZoom();
-});
-
 viewerCloseButton?.addEventListener("click", closeImageViewer);
 
 viewerPreviousButton?.addEventListener("click", () => {
@@ -325,8 +301,8 @@ imageViewer?.addEventListener("click", (event) => {
 imageViewerImage?.addEventListener(
   "touchstart",
   (event) => {
-    if (imageViewerImage.classList.contains("is-zoomed")) return;
     viewerTouchStartX = event.changedTouches[0].clientX;
+    viewerTouchStartY = event.changedTouches[0].clientY;
   },
   { passive: true }
 );
@@ -334,12 +310,12 @@ imageViewerImage?.addEventListener(
 imageViewerImage?.addEventListener(
   "touchend",
   (event) => {
-    if (imageViewerImage.classList.contains("is-zoomed")) return;
-
     const swipeDistance =
       event.changedTouches[0].clientX - viewerTouchStartX;
+    const verticalDistance =
+      event.changedTouches[0].clientY - viewerTouchStartY;
 
-    if (Math.abs(swipeDistance) < 50) return;
+    if (Math.abs(swipeDistance) < 50 || Math.abs(swipeDistance) < Math.abs(verticalDistance)) return;
 
     showViewerImage(activeViewerIndex + (swipeDistance < 0 ? 1 : -1));
   },
