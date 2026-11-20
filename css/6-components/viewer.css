@@ -42,15 +42,15 @@
 }
 
 .c-viewer__close {
-  top: var(--spacing-16);
-  right: var(--spacing-16);
+  top: var(--spacing-24);
+  right: var(--spacing-24);
   font-size: var(--fs-heading-l);
   opacity: 0.65;
 }
 
 .c-viewer__navigation {
   top: 50%;
-  font-size: var(--fs-heading-l);
+  font-size: var(--fs-heading-xl);
   transform: translateY(-50%);
 }
 
