@@ -26,6 +26,59 @@ window.addEventListener("scroll", updateUpButtonVisibility, { passive: true });
 window.addEventListener("resize", updateUpButtonVisibility);
 updateUpButtonVisibility();
 
+/* HERO CV DOWNLOAD MENU */
+const cvToggle = document.querySelector("[data-cv-toggle]");
+const cvMenu = document.querySelector("[data-cv-menu]");
+
+function closeCvMenu({ restoreFocus = false } = {}) {
+  if (!cvToggle || !cvMenu) return;
+  cvMenu.hidden = true;
+  cvToggle.setAttribute("aria-expanded", "false");
+  if (restoreFocus) cvToggle.focus();
+}
+
+function positionCvMenu() {
+  if (!cvToggle || !cvMenu || cvMenu.hidden) return;
+
+  const buttonRect = cvToggle.getBoundingClientRect();
+  const menuRect = cvMenu.getBoundingClientRect();
+  const gap = 0;
+  const left = Math.max(
+    8,
+    Math.min(buttonRect.left, window.innerWidth - menuRect.width - 8)
+  );
+  let top = buttonRect.bottom + gap;
+
+  if (top + menuRect.height > window.innerHeight - 8) {
+    top = buttonRect.top - menuRect.height - gap;
+  }
+
+  cvMenu.style.left = `${left}px`;
+  cvMenu.style.top = `${Math.max(8, top)}px`;
+}
+
+cvToggle?.addEventListener("click", () => {
+  const isExpanded = cvToggle.getAttribute("aria-expanded") === "true";
+  cvToggle.setAttribute("aria-expanded", String(!isExpanded));
+  cvMenu.hidden = isExpanded;
+  if (!isExpanded) positionCvMenu();
+});
+
+window.addEventListener("resize", positionCvMenu);
+window.addEventListener("scroll", positionCvMenu, true);
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".c-hero__cv") && !event.target.closest("#hero-cv-menu")) {
+    closeCvMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && cvMenu && !cvMenu.hidden) {
+    closeCvMenu({ restoreFocus: true });
+  }
+});
+
 upButton?.addEventListener("click", () => {
   window.scrollTo({
     top: 0,

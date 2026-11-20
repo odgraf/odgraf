@@ -76,6 +76,41 @@ PENDIENTE POR REVISAR
   gap: var(--spacing-16);
 }
 
+.c-hero__cv {
+  width: 100%;
+}
+
+.c-hero__cv-toggle {
+  width: 100%;
+}
+
+.c-hero__cv-menu {
+  position: fixed;
+  z-index: 1000;
+  width: max-content;
+  min-width: 22rem;
+  margin: 0;
+  padding: var(--spacing-16);
+  list-style: none;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--radius-4);
+  box-shadow: 0 0.4rem 1.2rem rgb(0 0 0 / 12%);
+}
+
+.c-hero__cv-menu[hidden] {
+  display: none;
+}
+
+.c-hero__cv-menu li,
+.c-hero__cv-menu a {
+  width: 100%;
+}
+
+.c-hero__cv-menu a {
+  justify-content: center;
+}
+
 /* Layout for Desktop (Breakpoints of =< 1024px) */
 @media (max-width: 1024px) {
   
@@ -105,7 +140,8 @@ PENDIENTE POR REVISAR
     gap: var(--spacing-16);
 }
 
-.c-hero__actions > a {
+.c-hero__actions > a,
+.c-hero__actions > .c-hero__cv {
   width: 100%;
 }
 }
