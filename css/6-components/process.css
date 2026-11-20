@@ -56,9 +56,12 @@
   flex-basis: 22rem;
   align-items: center;
   text-align: center;
+  height: 16.3rem;
 }
 
-/*.process__item--title {}*/
+.process__item--title {
+  font-weight: var(--fw-semibold);
+}
 
 .process__item--description {
   font-size: 1.6rem;
